@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .gif {
+        position: absolute;
+        top: 470px;
+        width: 570px;
+        left: 201px;
+      }
+      .background {
+        width: 100%;
+        height: 100%;
+      }
+      .id {
+        position: absolute;
+        display: block;
+        color: black;
+        top: 1314px;
+        font-size: 40px;
+        left: 481px;
+        background: white;
+      }
+      .name {
+        position: absolute;
+        display: block;
+        color: black;
+        top: 1229px;
+        font-size: 40px;
+        left: 791px;
+        background: white;
+      }
+      .search_time {
+        position: absolute;
+        display: block;
+        color: black;
+        top: 1405px;
+        font-size: 44px;
+        left: 576px;
+        background: white;
+        width: 300px;
+        text-align: right;
+      }
+      .expire_time {
+        position: absolute;
+        display: block;
+        color: #b17175;
+        top: 1475px;
+        font-size: 44px;
+        left: 576px;
+        background: white;
+        width: 300px;
+        text-align: right;
+      }
+      .current_date {
+        position: absolute;
+        display: block;
+        color: #79797a;
+        top: 334px;
+        font-size: 44px;
+        left: 287px;
+        background: white;
+        width: 390px;
+        text-align: right;
+      }
+      .current_time {
+        position: absolute;
+        display: block;
+        color: #79797a;
+        top: 387px;
+        font-size: 44px;
+        left: 190px;
+        background: white;
+        width: 390px;
+        text-align: right;
+      }
+      .face {
+        position: absolute;
+        top: 500px;
+        left: 240px;
+        width: 505px;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="gif" src="./test.gif" />
+    <img class="background" src="./card1.png" />
+    <span class="name">包**</span>
+    <span class="id">33***************1X</span>
+    <span class="search_time">11-27 10:33</span>
+    <span class="expire_time">11-27 24:00</span>
+    <span class="current_date"> 2020年06月23日 </span>
+    <span class="current_time"> 19:00:00 </span>
+    <img class="face" src="./face.png" />
+  </body>
+  <script>
+    document.querySelector('.search_time').innerText = dayjs().format(
+      'MM-DD hh:mm',
+    );
+    document.querySelector('.expire_time').innerText = dayjs().format(
+      'MM-DD 24:00',
+    );
+    document.querySelector('.current_date').innerText = dayjs().format(
+      'YYYY年MM月DD日',
+    );
+    document.querySelector('.current_time').innerText = dayjs().format(
+      'HH:mm:ss',
+    );
+  </script>
+</html>
