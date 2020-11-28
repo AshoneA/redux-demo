@@ -137,8 +137,10 @@
     document.querySelector('.current_date').innerText = dayjs().format(
       'YYYY年MM月DD日',
     );
-    document.querySelector('.current_time').innerText = dayjs().format(
-      'HH:mm:ss',
-    );
+    setInterval(() => {
+      document.querySelector('.current_time').innerText = dayjs().format(
+        'HH:mm:ss',
+      );
+    }, 1000);
   </script>
 </html>
